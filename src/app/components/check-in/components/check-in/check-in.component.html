@@ -1,0 +1,45 @@
+<div
+    style="display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 90px; border-style: double; padding: 15px;">
+
+    <h1>Registro de usuarios</h1>
+
+    <form style="padding-top: 30px;" [formGroup]="user">
+
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>username</mat-label>
+                <input matInput formControlName="username">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombres</mat-label>
+                <input matInput formControlName="firsName">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Apellidos</mat-label>
+                <input matInput formControlName="lastName">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>email</mat-label>
+                <input matInput placeholder="ejemplo@gmail.com" formControlName="email">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>contraseña</mat-label>
+                <input matInput formControlName="password">
+            </mat-form-field>
+
+            <div style="display: flex; justify-content: center; gap: 10px;">
+                <button mat-raised-button color="primary" style="color:azure; font-weight: bold; font-size: medium;"
+                    (click)="register()">Registrar</button>
+                <button mat-raised-button color="primary" style="color:azure; font-weight: bold; font-size: medium;"
+                    (click)="cancelar()">cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>
